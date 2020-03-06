@@ -34,6 +34,7 @@ namespace nsfcentralestagio.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseMySql("server=localhost;user id=root;password=1234;database=centralestagio_db");
             }
         }
@@ -112,10 +113,6 @@ namespace nsfcentralestagio.Models
                     .HasName("fk_tb_certificado_tb_curriculo1_idx");
 
                 entity.Property(e => e.DsCertificado)
-                    .HasCharSet("utf8")
-                    .HasCollation("utf8_general_ci");
-
-                entity.Property(e => e.DtCertificado)
                     .HasCharSet("utf8")
                     .HasCollation("utf8_general_ci");
 

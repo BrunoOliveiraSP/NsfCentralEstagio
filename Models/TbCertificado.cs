@@ -11,9 +11,8 @@ namespace nsfcentralestagio.Models
         [Required]
         [Column("ds_certificado", TypeName = "varchar(45)")]
         public string DsCertificado { get; set; }
-        [Required]
-        [Column("dt_certificado", TypeName = "varchar(45)")]
-        public string DtCertificado { get; set; }
+        [Column("dt_certificado", TypeName = "date")]
+        public DateTime DtCertificado { get; set; }
         [Key]
         [Column("idtb_certificado")]
         public int IdtbCertificado { get; set; }
